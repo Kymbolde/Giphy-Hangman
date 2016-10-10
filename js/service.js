@@ -20,3 +20,4 @@ angular.module('giphyApp').service('giphyService', function($http, $q) {
     return savedArray;
   }
 })
+

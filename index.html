@@ -4,12 +4,22 @@
     <meta charset="utf-8">
 	<title>Giphy Hangman</title>
     <link href="style.css" rel="stylesheet">
+    <link href="extraStyle.css" rel="stylesheet">
 </head>
 <body ng-controller="giphyCtrl">
 
 <div class="wrapper">
    <h1>Giphy Hangman</h1>
-    <p>Use the alphabet below to guess the word associated with the gif. </p>
+
+
+
+<div>
+    <img ng-src="{{test.images.downsized_large.url}}"/>
+</div>
+
+
+
+    <p>Use the alphabet below to guess the word associated with the above gif. </p>
 </div>
 <div class="wrapper">
     <div id="buttons">
@@ -20,21 +30,16 @@
     <p id="mylives"></p> 
      <canvas id="stickman"></canvas>
     <div class="container">
-      <button id="reset">Play again</button>
+      <button id="reset" ng-click="reloadRoute()">Play again</button>
     </div>
 </div>
 
 
 
 
-<div>
-    <img ng-src="{{test.images.downsized_large.url}}"/>
-</div>
 
 
-<form ng-submit="">
-    <input class="guessBox" type="text" ng-model="Guess" placeholder="Guess!">
-</form>
+
 
 
 
